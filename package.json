@@ -1,0 +1,102 @@
+{
+   "name": "@bemoje/clone",
+   "version": "1.0.1",
+   "description": "Deep and shallow clone.",
+   "main": "dist/clone.umd.js",
+   "module": "dist/clone.esm.js",
+   "browser": "dist/clone.umd.js",
+   "github": {
+      "user": "bemoje"
+   },
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/bemoje/bemoje-clone.git"
+   },
+   "scripts": {
+      "start": "node -r esm src/clone.js",
+      "test": "jest",
+      "example": "node -r esm examples/clone.example.js",
+      "docs": "documentation build src/** -f md -o docs/api.md && documentation build src/** -f html -o docs",
+      "rollup": "rollup -c",
+      "bench": "node -r esm benchmark/clone.benchmark.js",
+      "repo": "node -r esm scripts/repo.js",
+      "clean": "rimraf",
+      "version": "npm run repo version",
+      "major": "npm run repo bumpVersionMajor",
+      "minor": "npm run repo bumpVersionMinor",
+      "patch": "npm run repo bumpVersionPatch",
+      "readme": "npm run repo writeReadme",
+      "rename": "npm run repo rename",
+      "description": "npm run repo description",
+      "keywords": "npm run repo keywords",
+      "build": "npm run test && npm run bench && npm run rollup && npm run docs && npm run description && npm run keywords && npm run readme",
+      "commit": "npm run repo gitCommit",
+      "git-delete": "rimraf .git && bash scripts/github-delete.sh bemoje bemoje-clone",
+      "git-create": "rimraf .git && npm run repo gitCreate",
+      "publish": "npm run repo npmPublish"
+   },
+   "bugs": {
+      "url": "https://github.com/bemoje/bemoje-clone/issues",
+      "email": "bemoje@gmail.com"
+   },
+   "author": {
+      "name": "Benjamin M. Jensen",
+      "email": "bemoje@gmail.com",
+      "web": "https://github.io/bemoje/"
+   },
+   "license": "MIT",
+   "dependencies": {
+      "@bemoje/is-array": "^1.0.1",
+      "@bemoje/type-of": "^1.0.4"
+   },
+   "devDependencies": {
+      "babel-core": "^6.26.3",
+      "babel-jest": "^25.5.1",
+      "babel-preset-env": "^1.7.0",
+      "documentation": "^12.3.0",
+      "esm": "^3.2.25",
+      "fs-extra": "^9.0.0",
+      "hirestime": "^6.0.1",
+      "jest": "^24.9.0",
+      "keyword-extractor": "0.0.18",
+      "path": "^0.12.7",
+      "rimraf": "^3.0.2",
+      "rollup": "^1.32.1",
+      "rollup-plugin-commonjs": "^10.1.0",
+      "rollup-plugin-node-resolve": "^5.2.0",
+      "walk-sync": "^2.1.0"
+   },
+   "keywords": [
+      "deep",
+      "shallow",
+      "clone",
+      "merged",
+      "forks",
+      "https://github.com/jonschlinkert/shallow-clone",
+      "https://github.com/jonschlinkert/clone-deep.",
+      "[deep=false]",
+      "[instanceclone=true]",
+      "custom",
+      "objects",
+      "array",
+      "arr",
+      "object",
+      "obj",
+      "date-object",
+      "date",
+      "map",
+      "set",
+      "error",
+      "err",
+      "regexp",
+      "regex",
+      "arraybuffer",
+      "arrbuf",
+      "typedarray",
+      "arrtyped",
+      "buffer",
+      "buf",
+      "symbol",
+      "sym"
+   ]
+}
